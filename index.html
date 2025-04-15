@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemeTube - Memecoin Video Platform</title>
+    <title>DegensTube - Memecoin Video Platform</title>
     <link rel="shortcut icon" href="images/MT.png" type="image/png">
     <style>
       :root {
@@ -687,7 +687,7 @@
         </button>
         <div class="logo" onclick="backToHome()">
           <span class="material-icons logo-icon">play_circle_filled</span>
-          <span class="logo-text">MemeTube</span>
+          <span class="logo-text">DegensTube</span>
         </div>
       </div>
 
@@ -702,12 +702,12 @@
       <div class="header-ca-container">
         <div class="ca-wrapper">
           <span class="ca-label">CA:</span>
-          <span class="ca-address">4UTwDoPVTxJoMu3gVX6FUgSc54VMtD1JqURxNaRtpump</span>
+          <span class="ca-address">SOON</span>
           <button class="ca-copy" onclick="copyCA()">
             <span class="material-icons">content_copy</span>
           </button>
         </div>
-        <a href="https://x.com/memetubeonline" target="_blank" class="x-icon">
+        <a href="https://x.com/degenstube" target="_blank" class="x-icon">
           <img src="images/twit.png" alt="">
         </a>
       </div>
@@ -3271,7 +3271,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
 
         video.watched = true;
         localStorage.setItem(
-          "memetube-history",
+          "DegensTube-history",
           JSON.stringify(videos.filter((v) => v.watched).map((v) => v.id))
         );
       }
@@ -3288,7 +3288,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
     .map(v => v.id);
     
   localStorage.setItem(
-    "memetube-subscriptions",
+    "DegensTube-subscriptions",
     JSON.stringify(subscribedVideoIds)
   );
 }
@@ -3296,7 +3296,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
       // Save watch later to local storage
       function saveWatchLater() {
         localStorage.setItem(
-          "memetube-watch-later",
+          "DegensTube-watch-later",
           JSON.stringify(videos.filter((v) => v.saved).map((v) => v.id))
         );
       }
@@ -3304,7 +3304,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
       // Save liked videos to local storage
       function saveLikedVideos() {
         localStorage.setItem(
-          "memetube-liked",
+          "DegensTube-liked",
           JSON.stringify(videos.filter((v) => v.liked).map((v) => v.id))
         );
       }
@@ -3313,7 +3313,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
      // Load all data from local storage
 function loadFromLocalStorage() {
   // Load subscriptions
-  const savedSubscriptions = localStorage.getItem("memetube-subscriptions");
+  const savedSubscriptions = localStorage.getItem("DegensTube-subscriptions");
   if (savedSubscriptions) {
     const subscribedVideoIds = JSON.parse(savedSubscriptions);
     
@@ -3329,7 +3329,7 @@ function loadFromLocalStorage() {
   }
   // Остальной код функции остается без изменений...
   // Load watch later
-  const savedWatchLater = localStorage.getItem("memetube-watch-later");
+  const savedWatchLater = localStorage.getItem("DegensTube-watch-later");
   if (savedWatchLater) {
     const watchLaterIds = JSON.parse(savedWatchLater);
     videos.forEach((video) => {
@@ -3338,7 +3338,7 @@ function loadFromLocalStorage() {
   }
 
   // Load liked videos
-  const savedLiked = localStorage.getItem("memetube-liked");
+  const savedLiked = localStorage.getItem("DegensTube-liked");
   if (savedLiked) {
     const likedIds = JSON.parse(savedLiked);
     videos.forEach((video) => {
@@ -3347,7 +3347,7 @@ function loadFromLocalStorage() {
   }
 
   // Load history
-  const savedHistory = localStorage.getItem("memetube-history");
+  const savedHistory = localStorage.getItem("DegensTube-history");
   if (savedHistory) {
     const historyIds = JSON.parse(savedHistory);
     videos.forEach((video) => {
