@@ -688,7 +688,7 @@
         </button>
         <div class="logo" onclick="backToHome()">
           <span class="material-icons logo-icon">play_circle_filled</span>
-          <span class="logo-text">DegensTube</span>
+          <span class="logo-text">TrenchessTube</span>
         </div>
       </div>
 
@@ -708,7 +708,7 @@
             <span class="material-icons">content_copy</span>
           </button>
         </div>
-        <a href="https://x.com/degentube_" target="_blank" class="x-icon">
+        <a href="https://x.com/Trenchestube_" target="_blank" class="x-icon">
           <img src="images/twit.png" alt="">
         </a>
       </div>
@@ -3272,7 +3272,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
 
         video.watched = true;
         localStorage.setItem(
-          "DegensTube-history",
+          "TrenchessTube-history",
           JSON.stringify(videos.filter((v) => v.watched).map((v) => v.id))
         );
       }
@@ -3289,7 +3289,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
     .map(v => v.id);
     
   localStorage.setItem(
-    "DegensTube-subscriptions",
+    "TrenchessTube-subscriptions",
     JSON.stringify(subscribedVideoIds)
   );
 }
@@ -3297,7 +3297,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
       // Save watch later to local storage
       function saveWatchLater() {
         localStorage.setItem(
-          "DegensTube-watch-later",
+          "TrenchessTube-watch-later",
           JSON.stringify(videos.filter((v) => v.saved).map((v) => v.id))
         );
       }
@@ -3305,7 +3305,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
       // Save liked videos to local storage
       function saveLikedVideos() {
         localStorage.setItem(
-          "DegensTube-liked",
+          "TrenchessTube-liked",
           JSON.stringify(videos.filter((v) => v.liked).map((v) => v.id))
         );
       }
@@ -3314,7 +3314,7 @@ subscribeButton.className = isSubscribed ? "subscribe-button subscribed" : "subs
      // Load all data from local storage
 function loadFromLocalStorage() {
   // Load subscriptions
-  const savedSubscriptions = localStorage.getItem("DegensTube-subscriptions");
+  const savedSubscriptions = localStorage.getItem("TrenchessTube-subscriptions");
   if (savedSubscriptions) {
     const subscribedVideoIds = JSON.parse(savedSubscriptions);
     
@@ -3330,7 +3330,7 @@ function loadFromLocalStorage() {
   }
   // Остальной код функции остается без изменений...
   // Load watch later
-  const savedWatchLater = localStorage.getItem("DegensTube-watch-later");
+  const savedWatchLater = localStorage.getItem("TrenchessTube-watch-later");
   if (savedWatchLater) {
     const watchLaterIds = JSON.parse(savedWatchLater);
     videos.forEach((video) => {
@@ -3339,7 +3339,7 @@ function loadFromLocalStorage() {
   }
 
   // Load liked videos
-  const savedLiked = localStorage.getItem("DegensTube-liked");
+  const savedLiked = localStorage.getItem("TrenchessTube-liked");
   if (savedLiked) {
     const likedIds = JSON.parse(savedLiked);
     videos.forEach((video) => {
@@ -3348,7 +3348,7 @@ function loadFromLocalStorage() {
   }
 
   // Load history
-  const savedHistory = localStorage.getItem("DegensTube-history");
+  const savedHistory = localStorage.getItem("TrenchessTube-history");
   if (savedHistory) {
     const historyIds = JSON.parse(savedHistory);
     videos.forEach((video) => {
